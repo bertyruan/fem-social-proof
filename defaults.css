@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+select {
+  font: inherit;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+:root {
+  --font-size: 15px;
+  --font-family: Spartan;
+  --primary-color:  hsl(303, 10%, 53%);
+  --primary-color--dark: hsl(300, 43%, 22%);
+  --primary-color--light: hsl(300, 24%, 96%);
+  --secondary-color: hsl(333, 80%, 67%);
+}
+
+html {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+}
