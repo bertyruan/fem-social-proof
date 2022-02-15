@@ -89,6 +89,12 @@ h1 + p {
     }
 }
 
+@media screen and (min-width: 1440px) {
+    .rating__container {
+        aspect-ratio: 7 / 1;
+    }
+}
+
 .rating__desc {
     color: var(--primary-color--dark);
     font-weight: 700;
