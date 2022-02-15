@@ -7,6 +7,14 @@
     --mobile-width: 23rem;
 }
 
+.flex-margin {
+    flex: 1 1 30%;
+}
+
+.text-align {
+    text-align: center;
+}
+
 .flex-responsive {
     display: flex;
     flex-direction: column;
@@ -18,19 +26,17 @@ main.flex-responsive {
 }
 
 @media screen and (min-width: 1440px) {
+    .flex-responsive {
+        flex-direction: row;
+    }
+    .text-align {
+        text-align: left;
+    }
     main.flex-responsive {
         align-items: stretch;
         justify-content: space-evenly;
         gap: 2rem;
     }
-}
-
-.flex-margin {
-    flex: 1 1 30%;
-}
-
-.text-align {
-    text-align: center;
 }
 
 body>.flex-container {
@@ -40,22 +46,41 @@ body>.flex-container {
     min-height: 100vh;
 }
 
+header {
+    width: var(--xs-width);
+    margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 425px) {
+    header {
+        width: var(--mobile-width);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    header {
+        width: 35rem;
+        margin-bottom: 0;
+    }
+}
+
 h1 {
     font-size: 2.13rem;
+    line-height: 1;
+    font-weight: 700;
     color: var(--primary-color--dark);
+    margin-bottom: 1.5rem;
 }
 
 h1+p {
     color: var(--primary-color);
     font-weight: 500;
+    line-height: 1.67rem;
 }
 
 @media screen and (min-width: 1440px) {
-    .flex-responsive {
-        flex-direction: row;
-    }
-    .text-align {
-        text-align: left;
+    h1 {
+        font-size: 3.2rem;
     }
 }
 
@@ -64,6 +89,19 @@ h1+p {
 
 #top {
     margin-top: 20vh;
+}
+
+@media screen and (min-width: 1440px) {
+    #top {
+        justify-content: space-between;
+        margin-bottom: 5rem;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    #top {
+        margin-top: 5rem;
+    }
 }
 
 .ratings__container {
@@ -94,6 +132,7 @@ h1+p {
 @media screen and (min-width: 1440px) {
     .ratings__container {
         --ratings-inline-margin: 2.5rem;
+        margin-bottom: 0;
     }
     .rating__container:nth-child(1) {
         margin-right: calc(var(--ratings-inline-margin) * 2);
@@ -107,7 +146,7 @@ h1+p {
     .rating__container {
         justify-content: left;
         gap: 2rem;
-        width: 30vw;
+        width: 30rem;
         aspect-ratio: 8 / 1;
         padding-left: 2rem;
     }
